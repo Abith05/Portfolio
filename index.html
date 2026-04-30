@@ -291,17 +291,25 @@
                     </div>
                 </div>
 
-                <form class="contact-form glass-panel" action="https://formsubmit.co/abithkkuriakose2004@gmail.com" method="POST">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="New submission from Portfolio!">
-                    <input type="hidden" name="_captcha" value="false">
-                    
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+                <script type="text/javascript">var submitted=false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('success-popup').style.display='flex'; document.querySelector('.contact-form').reset(); submitted=false; }"></iframe>
+                <form class="contact-form glass-panel" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfEkEWWStxJSA3_PZpKWZV68UNQWT4HbDcvXOt6RhD8eXxA5w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+                    <input type="text" name="entry.1187623715" placeholder="Your Name" required>
+                    <input type="email" name="entry.2013122571" placeholder="Your Email" required>
+                    <textarea rows="5" name="entry.1537233541" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn primary-btn submit-btn">Send Message <i
                             class="fas fa-paper-plane"></i></button>
                 </form>
+
+                <!-- Success Popup -->
+                <div id="success-popup" class="popup-overlay" style="display: none;">
+                    <div class="popup-content glass-panel">
+                        <i class="fas fa-check-circle popup-icon"></i>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                        <button class="btn primary-btn" onclick="document.getElementById('success-popup').style.display='none'">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

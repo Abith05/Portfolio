@@ -664,3 +664,45 @@ footer p {
         height: 280px;
     }
 }
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: var(--nav-bg);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeInUp 0.5s ease;
+}
+
+.popup-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.popup-content h3 {
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
