@@ -49,7 +49,7 @@ let isMenuOpen = false;
 hamburger.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen;
     navLinks.classList.toggle('active');
-    hamburger.classList.toggle('fa-times');
+    hamburger.classList.toggle('is-open');
     hamburger.setAttribute('aria-expanded', isMenuOpen);
 });
 
@@ -73,7 +73,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        hamburger.classList.remove('fa-times');
+        hamburger.classList.remove('is-open');
         isMenuOpen = false;
         hamburger.setAttribute('aria-expanded', false);
     });

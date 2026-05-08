@@ -204,7 +204,7 @@ body {
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.hamburger.fa-times {
+.hamburger.is-open {
     transform: rotate(90deg) scale(1.1);
 }
 
@@ -491,8 +491,25 @@ body {
     font-weight: 600;
     color: var(--heading-color);
     background: rgba(255, 255, 255, 0.05);
-    padding: 5px 15px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.project-tech span i {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.project-tech span:hover {
+    background: rgba(112, 0, 255, 0.1);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.2);
 }
 
 /* Skills Section */
@@ -834,18 +851,25 @@ a:focus-visible, button:focus-visible {
     .projects-grid { grid-template-columns: 1fr; }
     .form-group { grid-template-columns: 1fr; }
     
-    .about-text, .contact-card { padding: 50px 30px; }
-    .contact-header { text-align: left; }
+    .about-text, .contact-card { padding: 60px 25px; }
+    .contact-header { text-align: center; }
     .contact-header h2 { font-size: 2.2rem; }
     
     .contact-body { 
         grid-template-columns: 1fr; 
-        text-align: left; 
+        text-align: center; 
         gap: 40px;
-        padding: 0 5px; /* Extra internal safety margin */
+        padding: 0;
     }
-    .contact-info { align-items: flex-start; }
-    .contact-form { align-items: flex-start; }
+    .contact-info { 
+        align-items: center; 
+        width: 100%;
+    }
+    .contact-form { 
+        align-items: center; 
+        width: 100%;
+    }
+    .social-box { justify-content: center; }
     .contact-form input, .contact-form textarea { width: 100%; }
     .form-group { width: 100%; }
     
