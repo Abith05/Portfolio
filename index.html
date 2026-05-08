@@ -4,319 +4,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abith K. Kuriakose | Portfolio</title>
+    <title>Abith K. Kuriakose | Full-Stack Architect</title>
     <meta name="description"
-        content="Portfolio of Abith K. Kuriakose, an MCA student and aspiring web developer focused on Django.">
-    <!-- Open Graph Metadata for Social Sharing -->
-    <meta property="og:title" content="Abith K. Kuriakose | Portfolio">
-    <meta property="og:description" content="Portfolio of Abith K. Kuriakose, an MCA student and aspiring web developer focused on Django.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/1234567?v=4"> <!-- Update this with your actual image URL if hosted -->
+        content="Portfolio of Abith K. Kuriakose, an MCA student and aspiring Full-Stack Developer specializing in Django and high-performance backend systems.">
+    <meta name="keywords"
+        content="Abith K Kuriakose, Django Developer, MCA Student, Python Developer, India, Web Development Portfolio">
+    <meta name="author" content="Abith K. Kuriakose">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abith05.github.io/Portfolio/">
+    <meta property="og:title" content="Abith K. Kuriakose | Full-Stack Architect">
+    <meta property="og:description"
+        content="Mastering backend architecture and crafting high-performance digital experiences.">
+    <meta property="og:image" content="profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Abith K. Kuriakose | Full-Stack Architect">
+    <meta property="twitter:description"
+        content="Mastering backend architecture and crafting high-performance digital experiences.">
+    <meta property="twitter:image" content="profile.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abith K. Kuriakose",
+      "jobTitle": "Full-Stack Developer",
+      "url": "https://abith05.github.io/Portfolio/",
+      "sameAs": [
+        "https://github.com/Abith05",
+        "https://linkedin.com/in/abith-k-kuriakose-249a2b2a4/"
+      ]
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Typed.js for typing animation -->
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Abith<span class="highlight">.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#cv">Resume</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <p class="greeting">Hi there, I'm</p>
-                <h1 class="name">Abith K. Kuriakose</h1>
-                <h2 class="role"><span class="typing-text"></span></h2>
-                <p class="summary">Focusing on Django, Python, and building scalable web solutions.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="abith_resume.pdf" class="btn secondary-btn" download>Download CV</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Abith05" target="_blank" aria-label="GitHub"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/abith-k-kuriakose-249a2b2a4/" target="_blank"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/abith_k_kuriakose/" target="_blank" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-wrapper glass-panel">
-                    <img src="profile.jpg" alt="Abith K. Kuriakose" id="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About <span class="highlight">Me</span></h2>
-            <div class="about-content glass-panel">
-                <div class="about-text">
-                    <p>
-                        Hi, I’m <strong>Abith K. Kuriakose</strong>, an MCA student and aspiring web developer with a
-                        strong focus on Django. I enjoy building practical, real-world applications and have developed a
-                        video streaming platform featuring adaptive streaming, custom video player controls, and user
-                        interaction systems like ratings and reviews.
-                    </p>
-                    <p>
-                        I work with Python, JavaScript, HTML, CSS, SQL, and tools like FFmpeg for video processing. I’m
-                        always looking to improve my skills and create efficient, scalable web solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Dynamic Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="glow-orb"></div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
-            <div class="skills-grid">
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>Java</span>
-                        <span>C</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-globe"></i> Web</h3>
-                    <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                    <div class="skill-tags">
-                        <span>Django</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-database"></i> Database</h3>
-                    <div class="skill-tags">
-                        <span>MySQL</span>
-                        <span>SQLite</span>
-                    </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-tags">
-                        <span>Git</span>
-                        <span>FFmpeg</span>
-                        <span>NetBeans</span>
-                        <span>VS Code</span>
-                    </div>
-                </div>
+    <!-- Navigation Header -->
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="logo">ABITH<span class="highlight">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home"> Home</a></li>
+                <li><a href="#about"> About</a></li>
+                <li><a href="#projects"> Projects</a></li>
+                <li><a href="#skills"> Skills</a></li>
+                <li><a href="#contact"> Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- CV Section -->
-    <section id="cv" class="cv">
-        <div class="container">
-            <h2 class="section-title">Education & <span class="highlight">Experience</span></h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Present</div>
-                    <div class="timeline-content glass-panel">
-                        <h3>Master of Computer Applications (MCA)</h3>
-                        <p class="institution">Currently Studying</p>
-                        <p>Focusing on advanced software engineering, database management systems, and modern web
-                            frameworks like Django.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge reveal">Available for new opportunities</div>
+                    <h1 class="name">Transforming Ideas Into <span class="highlight">Digital Reality.</span></h1>
+                    <h2 class="role"><span class="typing-text"></span></h2>
+                    <p class="summary reveal">I bridge the gap between complex backend logic and intuitive user
+                        interfaces. Specializing in Python/Django for scalable solutions.</p>
+                    <div class="cta-buttons reveal">
+                        <a href="#projects" class="btn primary-btn">View My Portfolio <i
+                                class="fas fa-external-link-alt"></i></a>
+                        <a href="#contact" class="btn secondary-btn">Let's Connect</a>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Previous</div>
-                    <div class="timeline-content glass-panel">
-                        <h3>Bachelor's Degree</h3>
-                        <p class="institution">Completed</p>
-                        <p>Built a solid foundation in core computer science subjects, programming logic, algorithms,
-                            and application development.</p>
+                <div class="hero-visual reveal">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Abith K. Kuriakose" id="profile-img" loading="eager">
                     </div>
                 </div>
             </div>
-            <div class="cv-download-wrapper">
-                <a href="abith_resume.pdf" class="btn primary-btn" download><i class="fas fa-file-download"></i> Download Full CV</a>
+            <div class="scroll-indicator">
+                <span>Scroll to Explore</span>
+                <div class="mouse"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="skills">
-        <div class="container">
-            <h2 class="section-title"><span class="highlight">Certifications</span> & Achievements</h2>
-            <div class="skills-grid">
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-certificate"></i> Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span>AWS Cloud Practitioner (Placeholder)</span>
-                    </div>
+        <!-- Section: About & Vision -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">The Visionary <span class="highlight">Backend.</span></h2>
                 </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-trophy"></i> Hackathons</h3>
-                    <div class="skill-tags">
-                        <span>1st Place College Hackathon 2025</span>
+                <div class="about-grid">
+                    <div class="about-text glass-panel reveal">
+                        <p>I am <strong>Abith K. Kuriakose</strong>, a Master of Computer Applications student dedicated
+                            to mastering the art of backend architecture. My approach combines technical precision with
+                            creative problem-solving.</p>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Performance</h4>
+                                <p>Optimized code for blazing-fast experiences.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Security</h4>
+                                <p>Building robust systems with safety at the core.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category glass-panel">
-                    <h3><i class="fas fa-award"></i> Programming</h3>
-                    <div class="skill-tags">
-                        <span>Python for Data Science (Coursera)</span>
+                    <div class="about-stats reveal">
+                        <div class="stat-card glass-panel">
+                            <h3>MCA</h3>
+                            <p>Post-Graduate Student</p>
+                        </div>
+                        <div class="stat-card glass-panel">
+                            <h3>2+</h3>
+                            <p>Major Projects Built</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
-            <div class="projects-grid">
-                <div class="project-card glass-panel">
-                    <div class="project-image">
-                        <img src="head.png" alt="Video Streaming Platform">
-                    </div>
-                    <div class="project-content">
-                        <h3>Video Streaming Platform</h3>
-                        <p>A comprehensive streaming application featuring adaptive streaming and custom video player
-                            controls. Includes user interaction systems such as ratings and reviews.</p>
-                        <div class="project-tech">
-                            <span>Django</span>
+        <!-- Section: Projects (Work) -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Featured <span class="highlight">Showcase.</span></h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-image">
+                            <img src="head.png" alt="StreamIT Platform Interface" loading="lazy">
+                            <div class="project-links">
+                                <a href="https://www.stream.publicvm.com/" target="_blank" class="project-link-icon"
+                                    aria-label="View Live Demo"><i class="fas fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Abith05" target="_blank" class="project-link-icon"
+                                    aria-label="View Source on GitHub"><i class="fab fa-github"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Full Stack Application</span>
+                            <h3>StreamIT</h3>
+                            <p>A sophisticated video streaming platform leveraging Django and FFmpeg for adaptive
+                                delivery.</p>
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>FFmpeg</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-image">
+                            <img src="College.png" alt="College Magazine Platform Interface" loading="lazy">
+                            <div class="project-links">
+                                <a href="https://github.com/Abith05/College-Magazine" target="_blank"
+                                    class="project-link-icon" aria-label="View Source on GitHub"><i
+                                        class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Digital Platform</span>
+                            <h3>UniMag</h3>
+                            <p>A collaborative digital magazine platform designed for modern campus communication.</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Skills & Toolkit -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Technical <span class="highlight">Ecosystem.</span></h2>
+                </div>
+                <div class="skills-wrapper">
+                    <div class="skills-category-box reveal">
+                        <h3><i class="fas fa-code"></i> Core Languages</h3>
+                        <div class="skill-tags">
                             <span>Python</span>
+                            <span>Java</span>
+                            <span>C / C++</span>
+                            <span>JavaScript (ES6+)</span>
+                        </div>
+                    </div>
+                    <div class="skills-category-box reveal">
+                        <h3><i class="fas fa-server"></i> Backend & DB</h3>
+                        <div class="skill-tags">
+                            <span>Django</span>
+                            <span>DRF</span>
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>SQLite</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                    <div class="skills-category-box reveal">
+                        <h3><i class="fas fa-tools"></i> Tools & Video</h3>
+                        <div class="skill-tags">
+                            <span>Git & GitHub</span>
                             <span>FFmpeg</span>
-                            <span>SQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Abith05" target="_blank" class="btn secondary-btn small-btn"><i
-                                    class="fab fa-github"></i> GitHub</a>
-                            <a href="https://streamit-0rwm.onrender.com/" class="btn primary-btn small-btn"><i
-                                    class="fas fa-external-link-alt"></i> Live
-                                Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-panel">
-                    <div class="project-image">
-                        <img src="College.png" alt="College Magazine Platform">
-                    </div>
-                    <div class="project-content">
-                        <h3>College Magazine</h3>
-                        <p>A dynamic digital magazine platform designed for college campuses. Features role-based access
-                            for editors and students, article publishing, event announcements, and interactive
-                            discussion sections.</p>
-                        <div class="project-tech">
-                            <span>Php</span>
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Abith05/College-Magazine" target="_blank"
-                                class="btn secondary-btn small-btn"><i class="fab fa-github"></i> GitHub</a>
-                            <!-- <a href="#" class="btn primary-btn small-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                            <span>VS Code</span>
+                            <span>NetBeans</span>
+                            <span>Bootstrap</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+        <!-- Section: Certifications & Achievements -->
+        <section id="achievements" class="achievements section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Accolades & <span class="highlight">Certifications.</span></h2>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-card glass-panel reveal">
+                        <i class="fas fa-trophy highlight-icon"></i>
+                        <h3>College Hackathon 2025</h3>
+                        <p>Secured <strong>1st Place</strong> in the annual inter-college hackathon for developing a
+                            scalable solution.</p>
+                    </div>
+                    <div class="achievement-card glass-panel reveal">
+                        <i class="fas fa-certificate highlight-icon"></i>
+                        <h3>Python for Data Science</h3>
+                        <p>Certified by Coursera (IBM) for advanced data manipulation and analysis using Python.</p>
+                    </div>
+                    <div class="achievement-card glass-panel reveal">
+                        <i class="fas fa-cloud highlight-icon"></i>
+                        <h3>AWS Cloud Practitioner</h3>
+                        <p>Professional certification focusing on AWS Cloud concepts, security, and core services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Journey (Timeline) -->
+        <section id="journey" class="journey section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">The <span class="highlight">Evolution.</span></h2>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <span class="date">2025 - PRESENT</span>
+                            <h3>Master of Computer Applications</h3>
+                            <p>Specializing in advanced backend systems and architectural design patterns.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <span class="date">2022 - 2025</span>
+                            <h3>Bachelor of Computer Applications</h3>
+                            <p>Built the fundamental bedrock of computer science and software development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cv-download-box reveal">
+                    <a href="abith_resume.pdf" class="btn primary-btn" download>
+                        <i class="fas fa-file-pdf"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contact -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="contact-card glass-panel reveal">
+                    <div class="contact-header">
+                        <h2>Ready to Build Something <span class="highlight">Great?</span></h2>
+                        <p>Currently seeking challenging roles where I can contribute to meaningful projects.</p>
+                    </div>
+                    <div class="contact-body">
+                        <div class="contact-info">
+                            <a href="mailto:abithkkuriakose2004@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                abithkkuriakose2004@gmail.com
+                            </a>
+                            <a href="tel:+919037214399" class="contact-link">
+                                <i class="fas fa-phone"></i>
+                                +91 9037214399
+                            </a>
+                            <div class="social-box">
+                                <a href="https://github.com/Abith05" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/abith-k-kuriakose-249a2b2a4/" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/abith_k_kuriakose/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">var submitted = false;</script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                            onload="if(submitted) { document.getElementById('success-popup').style.display='flex'; document.querySelector('.contact-form').reset(); submitted=false; }"></iframe>
+
+                        <form class="contact-form"
+                            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfEkEWWStxJSA3_PZpKWZV68UNQWT4HbDcvXOt6RhD8eXxA5w/formResponse"
+                            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+                            <div class="form-group">
+                                <input type="text" name="entry.1187623715" placeholder="Name" required>
+                                <input type="email" name="entry.2013122571" placeholder="Email" required>
+                            </div>
+                            <textarea name="entry.1537233541" rows="4" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn primary-btn">Send Message <i
+                                    class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Popup -->
+            <div id="success-popup" class="popup-overlay" style="display: none;">
+                <div class="popup-content glass-panel">
+                    <div class="success-icon"><i class="fas fa-check"></i></div>
+                    <h3>Transmission Sent!</h3>
+                    <p>Thanks for reaching out. I'll get back to you soon.</p>
+                    <button class="btn primary-btn"
+                        onclick="document.getElementById('success-popup').style.display='none'">Close</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
-            <p class="contact-subtitle">I'm currently looking for new opportunities. Whether you have a question or just
-                want to say hi, I'll try my best to get back to you!</p>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91-9037214399</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>abithkkuriakose2004@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>India</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <h4>Follow Me</h4>
-                        <div class="social-links">
-                            <a href="https://github.com/Abith05" target="_blank" aria-label="GitHub"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://linkedin.com/in/abith-k-kuriakose-249a2b2a4/" target="_blank"
-                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/abith_k_kuriakose/" target="_blank"
-                                aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <script type="text/javascript">var submitted=false;</script>
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('success-popup').style.display='flex'; document.querySelector('.contact-form').reset(); submitted=false; }"></iframe>
-                <form class="contact-form glass-panel" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfEkEWWStxJSA3_PZpKWZV68UNQWT4HbDcvXOt6RhD8eXxA5w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-                    <input type="text" name="entry.1187623715" placeholder="Your Name" required>
-                    <input type="email" name="entry.2013122571" placeholder="Your Email" required>
-                    <textarea rows="5" name="entry.1537233541" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn primary-btn submit-btn">Send Message <i
-                            class="fas fa-paper-plane"></i></button>
-                </form>
-
-                <!-- Success Popup -->
-                <div id="success-popup" class="popup-overlay" style="display: none;">
-                    <div class="popup-content glass-panel">
-                        <i class="fas fa-check-circle popup-icon"></i>
-                        <h3>Message Sent!</h3>
-                        <p>Thank you for reaching out. I'll get back to you soon.</p>
-                        <button class="btn primary-btn" onclick="document.getElementById('success-popup').style.display='none'">Close</button>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2026 Abith K. Kuriakose. Engineered with Passion.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Abith K. Kuriakose. Designed & Built with ❤️</p>
     </footer>
 
     <script src="script.js"></script>
